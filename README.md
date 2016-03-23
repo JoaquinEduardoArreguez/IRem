@@ -3,6 +3,8 @@ IRem is a USB device that allows you to control your computer with an Infrared r
 It uses Attiny85 microcontroller and vusb, a great library for most AVR's that provides sotware USB communication,
 so there is no extra hardware to manage USB connection.
 
+If you want to contribute to this project, contact me arreguez.joaquin@gmail.com
+
 Features:
 
 *No drivers needed. (Connects as HID Device)
