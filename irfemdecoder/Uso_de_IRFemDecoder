@@ -1,0 +1,16 @@
+int main(){
+	
+	inicializarSistema();
+
+	while(1){
+
+		_delay_ms(10);
+		if (lectura){
+			decodificar();
+			verificarMatch();
+			resumeLector();
+		}
+	}
+
+
+}

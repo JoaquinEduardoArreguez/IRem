@@ -1,0 +1,6 @@
+
+avr-gcc -mmcu=atmega328p -Wall -Os -o IRFemDecoderC.elf IRFemDecoderC.c
+
+avr-objcopy -j .text -j .data -O ihex IRFemDecoderC.elf IRFemDecoderC.hex
+
+avrdude -P /dev/ttyACM0 -b 19200 -c avrisp -p m328p -v -e -U lfuse:w:0xff:m -U hfuse:w:0xD1:m -U efuse:w:0x05:m -U flash:w:IRFemDecoderC.hex

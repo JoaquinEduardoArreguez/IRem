@@ -1,0 +1,20 @@
+El primer valor leido es el tiempo que transcurrio entre pulso y pulso, hay que descartarlo
+El protocolo NEC tiene:
+inicio:
+		a 9ms leading pulse burst
+		a 4.5ms space
+adress:
+		the 8-bit address for the receiving device
+		the 8-bit logical inverse of the address
+command:
+		the 8-bit command
+		the 8-bit logical inverse of the command
+fin:
+		a final 562.5µs pulse burst to signify the end of message transmission.
+
+Logical '0' – a 562.5µs pulse burst followed by a 562.5µs space, with a total transmit time of 1.125ms
+Logical '1' – a 562.5µs pulse burst followed by a 1.6875ms space, with a total transmit time of 2.25ms
+
+Con ésto, puedo eliminar:
+	los primeros 3 numeros del inicio
+	los 19 numeros del adress.
